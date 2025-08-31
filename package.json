@@ -1,15 +1,15 @@
 {
-  "name": "core",
+  "name": "core-electron",
   "version": "1.0.0",
-  "description": "A simple custom browser built with Electron",
+  "description": "Shade/Core custom Electron browser",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "keywords": ["electron", "browser", "custom"],
-  "author": "Noah O",
+  "keywords": ["electron", "browser"],
+  "author": "Noaho600",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^31.0.0"
+    "electron": "^31.7.7"
   }
 }
