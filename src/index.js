@@ -1,18 +1,12 @@
-const input = document.getElementById("search-box");
+const searchInput = document.getElementById('search');
 
-input.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") {
-    let query = input.value.trim();
-    if (!query) return;
-
-    // If it looks like a URL, navigate directly
-    if (query.startsWith("http")) {
-      window.location.href = query;
-    } else if (query.includes(".")) {
-      window.location.href = "https://" + query;
-    } else {
-      // Otherwise, search Google
-      window.location.href = "https://www.google.com/search?q=" + encodeURIComponent(query);
-    }
+searchInput.addEventListener('keypress', function(e) {
+  if (e.key === 'Enter') {
+    const query = encodeURIComponent(searchInput.value);
+    window.location.href = `https://www.google.com/search?q=${query}`;
   }
 });
+
+function goTo(url) {
+  window.location.href = url;
+}
