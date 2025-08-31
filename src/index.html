@@ -2,16 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Core</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Core Browser</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f5f5f5; }
+    header { background:#fff; padding:20px; display:flex; justify-content:center; align-items:center; }
+    input[type="text"] { width:50%; padding:10px; font-size:16px; border-radius:8px; border:1px solid #ccc; }
+    .shortcuts { display:flex; flex-wrap:wrap; justify-content:center; margin-top:40px; }
+    .shortcut { width:120px; height:120px; background:#fff; margin:10px; border-radius:12px; display:flex; justify-content:center; align-items:center; font-size:14px; text-align:center; cursor:pointer; box-shadow:0 2px 6px rgba(0,0,0,0.1); transition:0.2s; }
+    .shortcut:hover { transform:scale(1.05); box-shadow:0 4px 12px rgba(0,0,0,0.2); }
+  </style>
 </head>
 <body>
-  <h1>Core Browser</h1>
-  <input id="search-box" type="text" placeholder="Search or type URL...">
-  <div id="shortcuts">
-    <a href="https://youtube.com">YouTube</a>
-    <a href="https://github.com">GitHub</a>
+  <header>
+    <input type="text" id="search" placeholder="Search the web..." />
+  </header>
+
+  <div class="shortcuts">
+    <div class="shortcut" onclick="goTo('https://www.google.com')">Google</div>
+    <div class="shortcut" onclick="goTo('https://www.youtube.com')">YouTube</div>
+    <div class="shortcut" onclick="goTo('https://github.com')">GitHub</div>
+    <div class="shortcut" onclick="goTo('https://twitter.com')">Twitter</div>
   </div>
+
   <script src="index.js"></script>
 </body>
 </html>
