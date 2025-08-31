@@ -1,1 +1,15 @@
-
+{
+  "name": "core",
+  "version": "1.0.0",
+  "description": "A simple custom browser built with Electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": ["electron", "browser", "custom"],
+  "author": "Noah O",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^31.0.0"
+  }
+}
